@@ -10,13 +10,20 @@ let prezzoMinore = (prezzoTot - (prezzoTot * (20/100))).toFixed(2);
 
 let prezzoOver = (prezzoTot - (prezzoTot * (40/100))).toFixed(2);
 
-
-if(eta < 18){
-    document.getElementById("price").innerHTML = "Il prezzo del tuo biglietto è: " + (prezzoMinore) + "€";
-    document.getElementById("discount").innerHTML = "Hai avuto diritto ad uno sconto del 20%";
-} else if(eta > 65){
-    document.getElementById("price").innerHTML = "Il prezzo del tuo biglietto è: " + (prezzoOver) + "€";
-    document.getElementById("discount").innerHTML = "Hai avuto diritto ad uno sconto del 40%";
+if(isNaN(numeroDiKm) || isNaN(eta)){
+    document.getElementById("price").innerHTML = "Impossibile fare calcolo del prezzo, non hai inserito dei numeri. Riprova!"
 } else{
-    document.getElementById("price").innerHTML = "Il prezzo del tuo biglietto è: " + (prezzoTot) + "€";
-};
+
+    if(eta < 18){
+        document.getElementById("price").innerHTML = "Il prezzo del tuo biglietto è: " + (prezzoMinore) + "€";
+        document.getElementById("discount").innerHTML = "Hai avuto diritto ad uno sconto del 20%";
+    } else if(eta > 65){
+        document.getElementById("price").innerHTML = "Il prezzo del tuo biglietto è: " + (prezzoOver) + "€";
+        document.getElementById("discount").innerHTML = "Hai avuto diritto ad uno sconto del 40%";
+    } else{
+        document.getElementById("price").innerHTML = "Il prezzo del tuo biglietto è: " + (prezzoTot) + "€";
+    }
+
+}
+
+
