@@ -6,23 +6,11 @@
 
 body{
     background-image: url(https://www.napolike.it/wp-content/uploads/2023/01/trenitalia-treno.jpg);
-    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .box{
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: white;
     text-align: center;
-    justify-content: center;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 80%;
-    margin: auto;
-    height: 100vh;
-    font-size: 3rem;
-}
-
-h1{
-    padding-bottom: 5rem;
+    padding: 5rem 1rem;
 }
